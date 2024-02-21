@@ -23,7 +23,6 @@
 
                 <Entry Placeholder="Nombre" 
             TextColor="Black"
-            Text="Nombre"
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="FillAndExpand"/>
             </StackLayout>
@@ -32,14 +31,12 @@
             <StackLayout Orientation="Horizontal">
                 <Entry Placeholder="Ubicación" 
            TextColor="Black"
-           Text="Ubicación"
            VerticalOptions="CenterAndExpand"
            HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout>
                 <Entry Placeholder="Estado: " 
            TextColor="Black"
-           Text="Estado"
            
                      VerticalOptions="CenterAndExpand"
      HorizontalOptions="FillAndExpand"/>

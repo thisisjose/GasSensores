@@ -28,7 +28,7 @@ namespace GasSensores.ViewModel
         public async Task Insertar()
         {
 
-            await MostrarAlerta("Nota guardada correctamente", "OK");
+            await MostrarAlerta("Se guardó correctamente", "OK");
             await Volver();
         }
 

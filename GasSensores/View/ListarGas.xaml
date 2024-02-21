@@ -10,61 +10,32 @@
 
         <Label Text="Sensor de Gas" HorizontalOptions="Center" VerticalOptions="Center" FontSize="28" FontAttributes="Bold" TextColor="DarkGreen"/>
 
-        <CollectionView Background="#EAEDE1"
-                     x:Name="Listado"
-                         Grid.Row="1"
-                         ItemsSource="{Binding Listapokemon}"
-                         Margin="0,0,0,0">
+       <Frame Grid.Row="1" WidthRequest="280"
+       HorizontalOptions="Center"
+              VerticalOptions="Center"
+       CornerRadius="10"
+       HeightRequest="120"
+             Margin="0,0,0,500" > 
 
-            <CollectionView.ItemsLayout>
+    <StackLayout Margin="10,10,10,0">
+            <Label Text="Nombre: CDS"
+               CharacterSpacing="0"
+               FontSize="20"
+               />
+            <Label Text="Ubicación: CDS"
+               HorizontalOptions="Start"
+               TextTransform="None"
+               FontSize="20"
+               />
+            <Label Text="Estado: Bien"
+               HorizontalOptions="Start"
+               TextTransform="None"
+               FontSize="20"
+               />
+    </StackLayout>
 
-                <GridItemsLayout Orientation="Vertical" Span="1" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
-
-            </CollectionView.ItemsLayout>
-
-            <CollectionView.ItemTemplate>
-
-                <DataTemplate>
-
-                    <Grid RowDefinitions="100, *"
-                       Margin="0,20,0,0">
-
-                        <Frame Grid.Row="1" WidthRequest="280"
-                            HorizontalOptions="Center"
-                            CornerRadius="10"
-                            Margin="10,-100,10,0"
-                                    HasShadow="False">
-
-                            <StackLayout Margin="10,10,10,0">
-                                <Label Text="Nombre: CDS"
-                                        CharacterSpacing="0"
-                                        FontSize="20"
-                                        Margin="-19,10,0,5"/>
-                                <Label Text="Ubicación: CDS"
-                                         HorizontalOptions="Start"
-                                         TextTransform="None"
-                                         HeightRequest="25"
-                                         FontSize="20"
-                                         Margin="-18,0,-20,0"/>
-                                <Label Text="Estado: Bien"
-                                          HorizontalOptions="Start"
-                                          TextTransform="None"
-                                          HeightRequest="25"
-                                          FontSize="20"
-                                          Margin="-18,0,-20,0"/>
-                            </StackLayout>
-                        </Frame>
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Path=BindingContext.IraEditarcommand,Source={x:Reference Listado}}" CommandParameter="{Binding .}"/>
-                        </Grid.GestureRecognizers>
-                    </Grid>
-
-                </DataTemplate>
-
-            </CollectionView.ItemTemplate>
-
-        </CollectionView>
-
+</Frame>
+       
         <Button Text="+"
              Grid.Row="1"
              HeightRequest="80"
