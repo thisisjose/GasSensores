@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GasSensores.View.ListarGas"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <Grid RowDefinitions="60,*"
+       BackgroundColor="#FSF6F6">
+
+        <Label Text="Sensor de Gas" HorizontalOptions="Center" VerticalOptions="Center" FontSize="28" FontAttributes="Bold" TextColor="DarkGreen"/>
+
+        <CollectionView Background="#EAEDE1"
+                     x:Name="Listado"
+                         Grid.Row="1"
+                         ItemsSource="{Binding Listapokemon}"
+                         Margin="0,0,0,0">
+
+            <CollectionView.ItemsLayout>
+
+                <GridItemsLayout Orientation="Vertical" Span="1" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
+
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Grid RowDefinitions="100, *"
+                       Margin="0,20,0,0">
+
+                        <Frame Grid.Row="1" WidthRequest="280"
+                            HorizontalOptions="Center"
+                            CornerRadius="10"
+                            Margin="10,-100,10,0"
+                                    HasShadow="False">
+
+                            <StackLayout Margin="10,10,10,0">
+                                <Label Text="Nombre: CDS"
+                                        CharacterSpacing="0"
+                                        FontSize="20"
+                                        Margin="-19,10,0,5"/>
+                                <Label Text="Ubicación: CDS"
+                                         HorizontalOptions="Start"
+                                         TextTransform="None"
+                                         HeightRequest="25"
+                                         FontSize="20"
+                                         Margin="-18,0,-20,0"/>
+                                <Label Text="Estado: Bien"
+                                          HorizontalOptions="Start"
+                                          TextTransform="None"
+                                          HeightRequest="25"
+                                          FontSize="20"
+                                          Margin="-18,0,-20,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.IraEditarcommand,Source={x:Reference Listado}}" CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <Button Text="+"
+             Grid.Row="1"
+             HeightRequest="80"
+             WidthRequest="100"
+             VerticalOptions="End" 
+             HorizontalOptions="End"
+             CornerRadius="20"
+             Margin="15"
+             FontSize="35"
+             FontAttributes="Bold"
+             BackgroundColor="DarkGreen"
+             Command="{Binding IrARegistrocommand}"/>
+
+    </Grid>
+</ContentPage>
