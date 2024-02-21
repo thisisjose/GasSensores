@@ -16,7 +16,7 @@ namespace GasSensores.View
         public EditarGas()
         {
             InitializeComponent();
-            BindingContext = new VMlistargas(Navigation);
+            BindingContext = new VMeditargas(Navigation);
 
         }
     }

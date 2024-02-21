@@ -8,11 +8,10 @@
           BackgroundColor="White">
         <StackLayout Orientation="Horizontal" Padding="15">
 
-            <Image Source="https://i.ibb.co/QQT9zmJ/respuesta.png" WidthRequest="40">
+            <Image Source="https://i.ibb.co/QQT9zmJ/respuesta.png" WidthRequest="70">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding Volvercommand}"/>
                 </Image.GestureRecognizers>
-
             </Image>
             <Image Source="https://i.ibb.co/6XyYMZX/bloc.png" 
                 HorizontalOptions="CenterAndExpand" />

@@ -52,7 +52,6 @@ namespace GasSensores.ViewModel
         }
 
 
-
         #endregion.
         #region CONTRUCTOR
 
